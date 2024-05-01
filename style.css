@@ -1,0 +1,37 @@
+:root {
+    --primary: #1C191A;
+    --secondary: #F4B324;
+    --text: #F6E7D8;
+}
+
+html, body {
+    background-color: var(--primary);
+}
+
+.bg-primary-custom {
+    background-color: var(--primary);
+}
+
+.text-custom {
+    color: var(--text);
+}
+
+.link-custom:link, .link-custom:visited {
+    color: var(--text);
+}
+
+.link-custom:hover, .link-custom:active {
+    color: var(--secondary);
+}
+
+.text-header {
+    font-family: "Cardo", serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.text-title {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-size: 4rem;
+}
