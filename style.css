@@ -1,19 +1,53 @@
 :root {
-    --primary: #1C191A;
+    --primary1: #1C191A;
+    --primary2: #231F20;
     --secondary: #F4B324;
     --text: #F6E7D8;
 }
 
-html, body {
-    background-color: var(--primary);
-}
-
-.bg-primary-custom {
-    background-color: var(--primary);
-}
-
-.text-custom {
+* {
+    margin: 0;
+    padding: 0;
     color: var(--text);
+}
+
+html, body {
+    background-color: var(--primary1);
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.bg-primary1-custom {
+    background-color: var(--primary1);
+}
+
+.bg-primary2-custom {
+    background-color: var(--primary2);
+}
+
+.font-paragraph {
+    font-family: "Alata", sans-serif;
+    font-weight: 400;
+}
+
+.font-header {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+}
+
+.text-dark {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--primary1);
+    color: var(--text);
+}
+
+.text-header {
+    font-size: 32px;
+}
+
+.link-custom {
+    text-decoration: none;
 }
 
 .link-custom:link, .link-custom:visited {
@@ -22,16 +56,57 @@ html, body {
 
 .link-custom:hover, .link-custom:active {
     color: var(--secondary);
+    text-shadow: 2px 2px 5px var(--primary1);
 }
 
-.text-header {
-    font-family: "Cardo", serif;
-    font-weight: 400;
-    font-size: 20px;
+.nav-link {
+    font-size: 24px;
+    text-shadow: 2px 2px 5px var(--primary1);
+    text-transform: uppercase;
 }
 
-.text-title {
-    font-family: "Merriweather", serif;
-    font-weight: 700;
-    font-size: 4rem;
+.nav-item {
+    margin: 0 20px;
+}
+
+.navbar-brand {
+    margin: 0 20px;
+    padding: 0;
+}
+
+.navbar-logo {
+    width: 125px;
+    height: 100px;
+    object-fit: cover;
+    object-position: 0 -12.5px;
+}
+
+div#navbar .container-fluid {
+    padding: 1rem 0;
+}
+
+.content-container {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.text-container {
+    padding-left: 9rem;
+    padding-right: 9rem;
+}
+
+.rotated-header {
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg);
+}
+
+.imaged-container {
+    background-image: url("images/home-img-bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+div#location .container {
+    padding: 4rem;
 }
