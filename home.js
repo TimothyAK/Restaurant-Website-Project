@@ -1,19 +1,46 @@
-var navbar = document.getElementById("navbar");
-var carousel_img_container = document.getElementsByClassName("carousel-inner");
-var body_element = document.getElementsByTagName("body");
+$(document).ready(setInitialNavbarMargin);
 
-var carousel_img_height = window.innerHeight - navbar.offsetHeight;
+window.addEventListener("resize", updateNavbarMargin, true);
 
-console.log("height: " + carousel_img_height + "px")
-console.log("width: " + window.innerWidth + "px")
+document.querySelector("#scrollDownButton").addEventListener("click", scrollDown);
 
-carousel_img_container[0].setAttribute("style","height: " + carousel_img_height + "px")
+let initialScreenWidth = 0;
+let initialNavbarListLeftOffset = 0;
 
-var navbar_list = document.getElementsByClassName("navbar-nav")[0];
-var navbar_brand = document.getElementsByClassName("navbar-brand")[0].getBoundingClientRect();
+function setInitialNavbarMargin() {
+    let navbarBrand = document.getElementById("navbar-brand");
+    let navbarList = document.querySelectorAll(".navbar-list")[0];
 
-var navbar_margin_left = (window.innerWidth / 2) - navbar_brand.right + 10 + (navbar_brand.width / 2);
+    initialScreenWidth = window.innerWidth;
+    let navbarBrandWidth = navbarBrand.getBoundingClientRect().width;
 
-navbar_list.setAttribute("style", "margin-left: " + navbar_margin_left + "px");
+    let navbarBrandLeftCoordinate = navbarBrand.offsetLeft;
+    
+    initialNavbarListLeftOffset = (initialScreenWidth / 2) - navbarBrandLeftCoordinate - (navbarBrandWidth / 2);
 
-console.log(navbar_brand.left + " = " + (window.innerWidth / 2));
+    console.log("B");
+
+    navbarList.style["left"] = initialNavbarListLeftOffset + "px";
+}
+
+function updateNavbarMargin() {
+    let navbarList = document.querySelectorAll(".navbar-list")[0];
+
+    let currentScreenWidth = window.innerWidth;
+    let currentNavbarListLeftOffset;
+
+    currentNavbarListLeftOffset = initialNavbarListLeftOffset - ((initialScreenWidth - currentScreenWidth) / 2);
+
+    console.log("A");
+    
+
+    navbarList.style["left"] = currentNavbarListLeftOffset + "px";
+}
+
+function scrollDown() {
+    // console.log("test");
+    // $("body").animate({
+    //     scrollTop:  681
+    // }, 200)
+    window.scrollTo(0, 691);
+}
