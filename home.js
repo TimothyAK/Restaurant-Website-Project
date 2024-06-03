@@ -1,4 +1,5 @@
 $(document).ready(setInitialNavbarMargin);
+$(document).ready(underlineCurrentPage);
 
 window.addEventListener("resize", updateNavbarMargin, true);
 
@@ -38,9 +39,11 @@ function updateNavbarMargin() {
 }
 
 function scrollDown() {
-    // console.log("test");
-    // $("body").animate({
-    //     scrollTop:  681
-    // }, 200)
     window.scrollTo(0, 691);
+}
+
+function underlineCurrentPage() {
+    if(document.URL.includes("home.html")) {
+        document.querySelector("a#home-link").classList.add("active");
+    }
 }

@@ -97,6 +97,10 @@ html, body {
     font-size: 20px;
 }
 
+.navbar-item a.active {
+    border-bottom: 3px solid var(--secondary);
+}
+
 .navbar-item:has(img) {
     padding: 0 48px;
 }
