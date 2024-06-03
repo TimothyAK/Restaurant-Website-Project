@@ -1,5 +1,5 @@
 $(document).ready(setInitialNavbarMargin);
-
+$(document).ready(underlineCurrentPage);
 window.addEventListener("resize", updateNavbarMargin, true);
 
 let initialScreenWidth = 0;
@@ -41,4 +41,14 @@ function scrollDown() {
     //     scrollTop:  681
     // }, 200)
     window.scrollTo(0, 691);
+}
+
+function underlineCurrentPage() {
+    if(document.URL.includes("home.html")) {
+        document.querySelector("a#home-link").classList.add("active");
+    } else if(document.URL.includes("about.html")) {
+        document.querySelector("a#about-link").classList.add("active");
+    } else if(document.URL.includes("home.html")) {
+        document.querySelector("a#home-link").classList.add("active");
+    }
 }
