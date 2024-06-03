@@ -60,9 +60,9 @@
             <br><br>
             <hr class="left-hr">
             <hr class="right-hr">
-            <h2>Sabores del Sur is a casual and intimate Spanish-inspired restaurant, specializing in fresh, handmade pasta and family-style dishes designed to share.</h2>
-            <p>With the warm hospitality and energy of a traditional Italian home, we offer family-style service: all dishes are designed for sharing and the food arrives in the middle of the table, as it is prepared. The antipasti arrives first, with pasta courses close behind. We also offer house-made gluten-free options available daily. All menu items are available for dine-in or take-out.</p>
-            <hr class="left-hr">
+            <h2>Sabores del Sur is a casual and intimate Spanish restaurant, specializing in our Tapas and dessert.</h2>
+            <p>Experience the vibrant flavors of Spain at Sabores del Sur, a Spanish restaurant Specializing in authentic tapas and decadent desserts, our culinary journey invites you to indulge in the rich tapestry of Spanish cuisine. From classic Patatas Bravas to succulent Pinchos Morunos, our tapas menu offers a taste of tradition crafted with the finest ingredients sourced locally and from the Iberian Peninsula. Complement your meal with our sensational desserts, blending centuries-old recipes with modern flair. Whether you're a seasoned aficionado or a curious newcomer, Sabores del Sur promises an unforgettable dining experience celebrating the flavors and hospitality of Spain. All menu items are available for dine-in or take-out.</p>
+            <hr class="left-hr">    
             <hr class="right-hr">
         </div>
 
