@@ -36,7 +36,7 @@
                     <a href="/serverSIdeWebCourse/RestaurantWebProject/pages/home/home.html">HOME</a>
                 </li>
                 <li class="navbar-item">
-                    <a href="Menu.pdf" target="_blank">MENU</a>
+                    <a href="/serverSIdeWebCourse/RestaurantWebProject/pages/Menu.pdf" target="_blank">MENU</a>
                 </li>
                 <li class="navbar-item">
                     <img id="navbar-brand" src="images/restaurant_logo.png" alt="">
