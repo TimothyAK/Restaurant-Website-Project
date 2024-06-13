@@ -46,8 +46,8 @@ function underlineCurrentPage() {
     if(document.URL.includes("home.html")) {
         document.querySelector("a#home-link").classList.add("active");
     } else if(document.URL.includes("about.html")) {
-        document.querySelector("a#home-link").classList.add("active");
-    } else if(document.URL.includes("home.html")) {
-        document.querySelector("a#home-link").classList.add("active");
+        document.querySelector("a#about-link").classList.add("active");
+    } else if(document.URL.includes("reserve.php")) {
+        document.querySelector("a#reserve-link").classList.add("active");
     }
 }

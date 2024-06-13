@@ -1,5 +1,6 @@
 $(document).ready(setInitialNavbarMargin);
 $(document).ready(underlineCurrentPage);
+
 window.addEventListener("resize", updateNavbarMargin, true);
 
 let initialScreenWidth = 0;
@@ -33,14 +34,6 @@ function updateNavbarMargin() {
     
 
     navbarList.style["left"] = currentNavbarListLeftOffset + "px";
-}
-
-function scrollDown() {
-    // console.log("test");
-    // $("body").animate({
-    //     scrollTop:  681
-    // }, 200)
-    window.scrollTo(0, 691);
 }
 
 function underlineCurrentPage() {
