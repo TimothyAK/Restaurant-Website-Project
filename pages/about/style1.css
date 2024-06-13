@@ -257,6 +257,18 @@ hr {
     height:550px;
 }
 
+#about-food td {
+    padding: 10px;
+    vertical-align: top;
+  }
+  
+  /* Images */
+  img {
+    max-width: 100%; /* Ensure images never overflow */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+
 .kotak3{
 	border-radius: 20px 10px 80px 10px;
 }
@@ -266,6 +278,7 @@ hr {
 }
 
 #about-food h3{
+    padding-top: 180px;
     font-size: 1.6em;
     margin-bottom: 20px;
 }
