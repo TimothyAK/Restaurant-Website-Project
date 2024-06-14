@@ -178,7 +178,7 @@ html, body {
     margin-bottom: 16px;
 }
 
-.hero-container > button {
+.hero-container button {
     padding: 16px 27px 16px 24px;
 
     font-size: 16px;
@@ -200,7 +200,7 @@ html, body {
     z-index: 1;
 }
 
-.hero-container > button::before {
+.hero-container button::before {
     content: "";
     position: absolute;
 
@@ -219,11 +219,11 @@ html, body {
     z-index: -1;
 }
 
-.hero-container > button:hover {
+.hero-container button:hover {
     color: var(--primary1);
 }
 
-.hero-container > button:hover::before {
+.hero-container button:hover::before {
     width: 100%;
 }
 
@@ -318,7 +318,7 @@ html, body {
     margin-bottom: 24px;
 }
 
-#about-us > .col:nth-child(2) > button {
+#about-us > .col:nth-child(2) > a > button {
     padding: 16px 27px 16px 24px;
 
     font-size: 16px;
@@ -340,7 +340,7 @@ html, body {
     z-index: 1;
 }
 
-#about-us > .col:nth-child(2) > button::before {
+#about-us > .col:nth-child(2) > a > button::before {
     content: "";
     position: absolute;
 
@@ -359,11 +359,11 @@ html, body {
     z-index: -1;
 }
 
-#about-us > .col:nth-child(2) > button:hover {
+#about-us > .col:nth-child(2) > a > button:hover {
     color: var(--primary1);
 }
 
-#about-us > .col:nth-child(2) > button:hover::before {
+#about-us > .col:nth-child(2) > a > button:hover::before {
     width: 100%;
 }
 
