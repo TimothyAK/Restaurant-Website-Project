@@ -53,17 +53,27 @@
     <div id="reserve" class="container">
         <div class="content-container">
             <h2>Make a Reservation</h2>
-            <form action="/SGU/Final/pages/Reserve/submit-reservation.html" method="post">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name"><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br>
-                <label for="date">Date:</label><br>
-                <input type="date" id="date" name="date"><br>
-                <label for="time">Time:</label><br>
-                <input type="time" id="time" name="time"><br>
-                <label for="guests">Number of Guests:</label><br>
-                <input type="number" id="guests" name="guests" min="1"><br>
+            <form action="/SGU/Final/pages/Reserve/reserve.php" method="post">
+                <div>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name"><br>
+                </div>
+                <div>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email"><br>
+                </div>
+                <div>
+                    <label for="date">Date:</label><br>
+                    <input type="date" id="date" name="date"><br>
+                </div>
+                <div>
+                    <label for="time">Time:</label><br>
+                    <input type="time" id="time" name="time"><br>
+                </div>
+                <div>
+                    <label for="guests">Number of Guests:</label><br>
+                    <input type="number" id="guests" name="guestAmount" min="1"><br>
+                </div>
                 <input type="submit" value="Submit">
             </form>
         </div>

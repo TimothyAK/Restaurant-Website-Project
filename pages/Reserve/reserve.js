@@ -1,6 +1,8 @@
 $(document).ready(setInitialNavbarMargin);
 $(document).ready(underlineCurrentPage);
-
+$(document).ready(setMinDate);
+$(document).ready(setMinMaxTime);
+$("input#date").change(setMinMaxTime);
 window.addEventListener("resize", updateNavbarMargin, true);
 
 let initialScreenWidth = 0;
@@ -49,4 +51,27 @@ function underlineCurrentPage() {
 function redirectToConfirmation(event){
     event.preventDefault();
     window.location.href = '/finalproject/Reserve/submit-reservation.html';
+}
+
+function setMinDate(){
+    var today = new Date();
+    var dd = String(today.getDate()+1).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+
+    today = yyyy + '-' + mm + '-' + dd;
+    $('#date').attr("min", today);
+}
+function setMinMaxTime(){
+    let date = document.getElementById("date").value;
+    let inputTime = document.getElementById("time");
+    console.log(date);
+    let chosenDate = new Date (date).getDay();
+    if(chosenDate>0 && chosenDate<6){
+        inputTime.min = "09:00";
+        inputTime.max = "19:00";
+    }else{
+        inputTime.min = "09:00";
+        inputTime.max = "18:00";
+    }
 }
