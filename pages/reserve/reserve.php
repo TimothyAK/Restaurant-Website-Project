@@ -12,6 +12,9 @@ if($conn->connect_error){
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    $sql = "SELECT * FROM reservations";
+    $result = mysqli_query($conn, $sql);
+    $id = mysqli_num_rows($result) + 1;
     $name = htmlspecialchars(trim($_POST['name']));
     $email = htmlspecialchars(trim($_POST['email']));
     $date = htmlspecialchars(trim($_POST['date']));
@@ -22,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         die("Invalid email format");
     }
 
-    $stmt = $conn->prepare("INSERT INTO reservations (name, email, date, time, guestAmount) VALUES ('$name','$email','$date','$time','$guestAmount')");
+    $stmt = $conn->prepare("INSERT INTO reservations (id, name, email, date, time, guestAmount) VALUES ('$id', '$name','$email','$date','$time','$guestAmount')");
 
     if($stmt->execute()){
         echo "New reservation created successfully";
