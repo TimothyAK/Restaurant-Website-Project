@@ -51,7 +51,7 @@
 
     <div id="reserve" class="container">
         <h2>Book A Reservation</h2>
-        <form action="">
+        <form action="recordReservation.php" method="post">
             <label for="reserve-date">Choose a date & time : </label>
             <br>
             <fieldset id="fieldset-date">
@@ -102,15 +102,12 @@
             
             <label for="">Number of people : </label>
             <br>
-            <fieldset id="fieldset-number">
-                <select id="numberOfPeople" name="numberOfPeople">
-                    <option value="1-2">1-2</option>
-                    <option value="3-4">3-4</option>
-                    <option value="5-6">5-6</option>
-                    <option value="7-8">7-8</option>
-                    </select>
-                <p>Please specify the number of people you would like to book a table for.</p>
-            </fieldset>
+            <select id="numberOfPeople" name="number-of-people">
+                <option value="1-2">1-2</option>
+                <option value="3-4">3-4</option>
+                <option value="5-6">5-6</option>
+                <option value="7-8">7-8</option>
+            </select>
 
             <label for="">Name :</label>
             <br>
@@ -133,7 +130,7 @@
             </select>
 
             <fieldset id="fieldset-submit">
-                <input type="submit" value="Reserve">
+                <input type="submit" name="reserve" value="Reserve">
                 <div class="reservation-notice">
                     <h3>Thank for your reservation. Your reservation has been recorded.</h3>
                     <p>In a short while, you will be asked to confirm your reservation through your preferred way of confirmation.</p>
