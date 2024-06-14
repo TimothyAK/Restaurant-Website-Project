@@ -30,5 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         echo "Error: " . $stmt->error;
     }
 }
+
+header("location:/SGU/Final/pages/Reserve/submit-reservation.html");
 echo "";
 ?>

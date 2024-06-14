@@ -31,16 +31,16 @@
         <div class="container">
             <ul class="navbar-list">
                 <li class="navbar-item">
-                    <a id="home-link" href="/finalproject/home/home.html">HOME</a>
+                    <a id="home-link" href="/SGU/Final/pages/home/home.html">HOME</a>
                 </li>
                 <li class="navbar-item">
-                    <a id="menu-link" href="/finalproject/Menu.pdf" target="_blank">MENU</a>
+                    <a id="menu-link" href="/SGU/Final/pages/Menu.pdf" target="_blank">MENU</a>
                 </li>
                 <li class="navbar-item">
                     <img id="navbar-brand" src="images/restaurant_logo.png" alt="">
                 </li>
                 <li class="navbar-item">
-                    <a id="about-link" href="/finalproject/about/about.html">ABOUT</a>
+                    <a id="about-link" href="/SGU/Final/pages/about/about.html">ABOUT</a>
                 </li>
                 <li class="navbar-item">
                     <a id="reserve-link" href="#">RESERVE</a>
@@ -53,17 +53,27 @@
     <div id="reserve" class="container">
         <div class="content-container">
             <h2>Make a Reservation</h2>
-            <form action="/finalproject/Reserve/submit-reservation.html" method="post">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name"><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br>
-                <label for="date">Date:</label><br>
-                <input type="date" id="date" name="date"><br>
-                <label for="time">Time:</label><br>
-                <input type="time" id="time" name="time"><br>
-                <label for="guests">Number of Guests:</label><br>
-                <input type="number" id="guests" name="guests" min="1"><br>
+            <form action="/SGU/Final/pages/Reserve/reserve.php" method="post">
+                <div>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name"><br>
+                </div>
+                <div>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email"><br>
+                </div>
+                <div>
+                    <label for="date">Date:</label><br>
+                    <input type="date" id="date" name="date"><br>
+                </div>
+                <div>
+                    <label for="time">Time:</label><br>
+                    <input type="time" id="time" name="time"><br>
+                </div>
+                <div>
+                    <label for="guests">Number of Guests:</label><br>
+                    <input type="number" id="guests" name="guestAmount" min="1"><br>
+                </div>
                 <input type="submit" value="Submit">
             </form>
         </div>
@@ -78,10 +88,11 @@
                 <a id="menu-link" href="/SGU/Final/pages/Menu.pdf" target="_blank">Menu</a>
             </li>
             <li>
-                <a id="about-link" href="">About</a>
+                <a id="about-link" href="/SGU/Final/pages/about/about.html">About</a>
             </li>
             <li>
                 <a id="reserve-link" href="">Reserve</a>
+            </li>
             </li>
         </ul>
         <h1>Sabores del Sur</h1>
