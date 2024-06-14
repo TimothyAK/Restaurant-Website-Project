@@ -253,8 +253,8 @@ hr {
 }
 
 #about-food img{
-    width:500px;
-    height:550px;
+    width: 100%;
+    height:auto;
 }
 
 #about-food td {
@@ -268,6 +268,10 @@ hr {
     height: auto; /* Maintain aspect ratio */
   }
 
+#about-food .text2{
+    padding-top: 80px;
+}
+
 
 .kotak3{
 	border-radius: 20px 10px 80px 10px;
@@ -278,7 +282,7 @@ hr {
 }
 
 #about-food h3{
-    padding-top: 180px;
+    padding-top: 80px;
     font-size: 1.6em;
     margin-bottom: 20px;
 }
@@ -292,11 +296,20 @@ hr {
     margin-top: 3%;
 }
 
-#about-end h3{
-    padding-top: 4%;
+#about-end h2{
+    padding-top: 2%;
     padding-left: 30% ;
     padding-right: 30%;
-    font-size: 1.6em;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#about-end h3{
+    padding-top: 2%;
+    padding-left: 30% ;
+    padding-right: 30%;
+    font-size: 1.2em;
     margin-bottom: 20px;
     text-align: center;
 }
