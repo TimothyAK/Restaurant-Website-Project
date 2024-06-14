@@ -55,14 +55,8 @@
             <label for="reserve-date">Choose a date & time : </label>
             <br>
             <fieldset id="fieldset-date">
-                <input type="number" list="available-dates" name="date" placeholder="DD" required>
-                <datalist id="available-dates">
-
-                </datalist>
-                <input type="number" list="available-months" name="month" placeholder="MM" required>
-                <datalist id="available-months">
-
-                </datalist>
+                <input type="number" id="available-dates" name="date" placeholder="DD" min="1" max="30" required>
+                <input type="number" id="available-months" name="month" placeholder="MM" min="1" max="12" required>
                 <select id="available-times" name="time">
                     <option value="9">09:00</option>
                     <option value="915">09:15</option>
@@ -139,7 +133,6 @@
             </select>
 
             <fieldset id="fieldset-submit">
-
                 <input type="submit" value="Reserve">
                 <div class="reservation-notice">
                     <h3>Thank for your reservation. Your reservation has been recorded.</h3>

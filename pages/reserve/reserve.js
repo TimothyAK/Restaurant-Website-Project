@@ -1,7 +1,11 @@
-$(document).ready(setInitialNavbarMargin);
-$(document).ready(underlineCurrentPage);
+$(document).ready(function() {
+    setInitialNavbarMargin();
+    underlineCurrentPage();
+    setDateMonthBoundaries();
+    $(window).resize(updateNavbarMargin);
+    $("input#available-months").change(updateDateMonthBoundaries);
+});
 
-window.addEventListener("resize", updateNavbarMargin, true);
 
 let initialScreenWidth = 0;
 let initialNavbarListLeftOffset = 0;
@@ -41,7 +45,42 @@ function underlineCurrentPage() {
         document.querySelector("a#home-link").classList.add("active");
     } else if(document.URL.includes("about.html")) {
         document.querySelector("a#about-link").classList.add("active");
-    } else if(document.URL.includes("reserve.php")) {
+    } else if(document.URL.includes("reserve.html")) {
         document.querySelector("a#reserve-link").classList.add("active");
+    }
+}
+
+function setDateMonthBoundaries() {
+    const today = new Date();
+    const minDate = today.getDate() + 1;
+    const maxDate = new Date(today.getFullYear(), today.getMonth() + 1, 0).getDate();
+    const thisMonth = today.getMonth()+1;
+
+    let dateInputForm = document.getElementById("available-dates");
+    let monthInputForm = document.getElementById("available-months");
+
+    dateInputForm.setAttribute("min", minDate);
+    dateInputForm.setAttribute("max", maxDate);
+
+    monthInputForm.setAttribute("min", thisMonth);
+    monthInputForm.setAttribute("max", 12);
+}
+
+function updateDateMonthBoundaries() {
+    const today = new Date();
+    const thisMonth = today.getMonth() + 1;
+
+    let dateInputForm = document.getElementById("available-dates");
+    let monthInputForm = document.getElementById("available-months");
+
+    let currentMonth = monthInputForm.value;
+    let minDate = new Date(today.getFullYear(), currentMonth, 1).getDate();
+    let maxDate = new Date(today.getFullYear(), currentMonth, 0).getDate();
+
+    if(currentMonth != thisMonth) {
+        dateInputForm.setAttribute("min", minDate);
+        dateInputForm.setAttribute("max", maxDate);
+    } else if (currentMonth == thisMonth) {
+        setDateMonthBoundaries();
     }
 }
