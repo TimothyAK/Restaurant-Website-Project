@@ -56,23 +56,23 @@
             <form action="/SGU/Final/pages/Reserve/reserve.php" method="post">
                 <div>
                     <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name"><br>
+                    <input type="text" id="name" name="name" required><br>
                 </div>
                 <div>
                     <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email"><br>
+                    <input type="email" id="email" name="email" required><br>
                 </div>
                 <div>
                     <label for="date">Date:</label><br>
-                    <input type="date" id="date" name="date"><br>
+                    <input type="date" id="date" name="date" required><br>
                 </div>
                 <div>
                     <label for="time">Time:</label><br>
-                    <input type="time" id="time" name="time"><br>
+                    <input type="time" id="time" name="time" required><br>
                 </div>
                 <div>
                     <label for="guests">Number of Guests:</label><br>
-                    <input type="number" id="guests" name="guestAmount" min="1"><br>
+                    <input type="number" id="guests" name="guestAmount" min="1" required><br>
                 </div>
                 <input type="submit" value="Submit">
             </form>
