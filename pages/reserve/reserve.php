@@ -59,9 +59,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // Insert Reservation
     $stmt = $conn->prepare("INSERT INTO `reservations` (
-    `reservation_id`, `customer_id`, `reservation_date`, `reservation_time`, `guest_amount`) 
+    `reservation_id`, `customer_id`, `reservation_date`, `reservation_time`, `guest_amount`, `reservation_status`) 
     VALUES (
-    '$reservation_id', '$customer_id', '$reservation_date', '$reservation_time', '$guest_amount')");
+    '$reservation_id', '$customer_id', '$reservation_date', '$reservation_time', '$guest_amount', 0)");
 
     if($stmt->execute()){
         echo "New reservation created successfully";
